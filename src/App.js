@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home'
 import SearchPage from './pages/SearchPage'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter basename="/">
         <Switch>
           <Route path="/search">
             <SearchPage />
@@ -16,7 +16,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
